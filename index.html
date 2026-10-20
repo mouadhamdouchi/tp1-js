@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1 JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TP1 - JavaScript</h1>
+        <p>Exercices 1 à 4</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercice 1 : QCM</h2>
+            <p>Choisis une ou plusieurs réponses selon la question.</p>
+            <form id="formQCM">
+                <div id="questions"></div>
+                <button type="button" onclick="initialiserQCM()">Initialiser le QCM</button>
+                <button type="button" onclick="afficherCorrige()">Afficher le corrigé</button>
+                <button type="button" onclick="afficherResultat()">Afficher le résultat</button>
+            </form>
+            <p id="messageQCM" class="resultat"></p>
+        </section>
+
+        <section>
+            <h2>Exercice 2 : Vérifier une adresse email</h2>
+            <label for="email">Adresse email :</label>
+            <input type="text" id="email" placeholder="exemple@mail.com">
+            <button type="button" onclick="verifierEmail()">Vérifier</button>
+            <p id="resultatEmail" class="resultat"></p>
+        </section>
+
+        <section>
+            <h2>Exercice 3 : Trier une liste de nombres</h2>
+            <p>Écris les nombres séparés par des virgules.</p>
+            <label for="listeNombres">Liste :</label>
+            <input type="text" id="listeNombres" value="8, 3, 12, 1">
+            <button type="button" onclick="trierListe()">Trier</button>
+            <p id="resultatTri" class="resultat"></p>
+        </section>
+
+        <section>
+            <h2>Exercice 4 : Additionner trois durées</h2>
+            <p>Saisis les heures, minutes et secondes de chaque durée.</p>
+            <div>
+                <strong>Durée 1 :</strong>
+                <label>Heures <input type="number" id="h1" min="0" value="1"></label>
+                <label>Minutes <input type="number" id="m1" min="0" value="20"></label>
+                <label>Secondes <input type="number" id="s1" min="0" value="30"></label>
+            </div>
+            <div>
+                <strong>Durée 2 :</strong>
+                <label>Heures <input type="number" id="h2" min="0" value="2"></label>
+                <label>Minutes <input type="number" id="m2" min="0" value="45"></label>
+                <label>Secondes <input type="number" id="s2" min="0" value="40"></label>
+            </div>
+            <div>
+                <strong>Durée 3 :</strong>
+                <label>Heures <input type="number" id="h3" min="0" value="20"></label>
+                <label>Minutes <input type="number" id="m3" min="0" value="10"></label>
+                <label>Secondes <input type="number" id="s3" min="0" value="50"></label>
+            </div>
+            <button type="button" onclick="additionnerDurees()">Calculer la somme</button>
+            <p id="resultatDurees" class="resultat"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
